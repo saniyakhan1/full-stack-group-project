@@ -1,6 +1,7 @@
 body {
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
+
 header {
   background-image: url(/images/best-about-us-pages.jpeg);
   background-repeat: no-repeat;
@@ -10,34 +11,166 @@ header {
   display: flex;
   align-items: end;
 }
+
 nav {
   width: 100%;
   height: 40px;
 }
+
 nav ul {
   display: flex;
   height: 100%;
   background-color: #d9d9d9;
   list-style: none;
 }
+
 nav ul li {
   width: 17%;
   text-align: center;
   height: 100%;
+  color: black;
 }
+
 nav a:hover,
 .active {
   text-transform: uppercase;
   height: 100%;
   background-color: beige;
 }
+
 .main-image {
   margin-top: 30px;
+
 }
+
 .intro-text {
   font-size: small;
   margin-left: 8px;
 }
+
+.intro-text ul li {
+  list-style: none;
+
+}
+
 .welcome {
   font-size: x-small;
+}
+
+.navbar ul li {
+  width: 100%;
+  text-decoration: none;
+  list-style: none;
+  color: black;
+}
+
+.h1 {
+  text-align: center;
+}
+
+.lorem1 {
+  font-size: 20px;
+}
+
+h2 {
+  font-size: 40px;
+  text-align: center;
+
+}
+
+.nabeel-sign {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 43%;
+}
+
+.saniya-sign {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+  width: 43%;
+}
+
+.dad-and-kids {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+  width: 70%;
+  height: 570px;
+}
+
+.pic-2009 {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+  width: 50%;
+  height: 570px;
+}
+
+.social-media ul li {
+  list-style: none;
+  float: left;
+
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+@media(max-width:800px) {
+  .dad-and-kids {
+    width: 300px;
+    height: 280px;
+    float: left;
+    padding-bottom: 50px;
+    padding-bottom: 30px;
+    margin-right: 10px;
+  }
+
+  .clearfix:after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  .intro-text {
+    text-align: right;
+  }
+
+  .lorem1 {
+    padding-top: 35px;
+  }
+
+}
+
+@media(max-width:300) {
+  .dad-and-kids {
+    width: 500px;
+    height: 280px;
+    padding-bottom: 50px;
+    padding-bottom: 30px;
+    margin-right: 10px;
+  }
+
+  .clearfix:after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  .intro-text {
+    text-align: right;
+
+  }
+
+  .lorem1 {
+    padding-top: 35px;
+    text-align: left;
+  }
 }
