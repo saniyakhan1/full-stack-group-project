@@ -1,17 +1,14 @@
 {
-  "dependencies": {
-    "express": "^4.18.2"
-  },
   "name": "full-stack-group-project",
-  "description": "Project to create a full stack website",
   "version": "1.0.0",
+  "description": "Project to create a full stack website",
   "main": "index.js",
   "directories": {
     "doc": "docs"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js"
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
@@ -23,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/saniyakhan1/full-stack-group-project/issues"
   },
-  "homepage": "https://github.com/saniyakhan1/full-stack-group-project#readme"
+  "homepage": "https://github.com/saniyakhan1/full-stack-group-project#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
 }
