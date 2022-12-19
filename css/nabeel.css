@@ -4,7 +4,8 @@ body {
   background-size: cover;
   background-position: center;
   display: flex;
-  align-items: end;
+  background;
+
 }
 
 .image {
@@ -12,7 +13,6 @@ body {
 }
 
 .container {
-
   width: 70%;
   height: 100vh;
   margin: auto;
@@ -20,7 +20,9 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  position: relative;
+  position: absolute;
+  padding-left: 200px;
+  padding-top: 100px;
 }
 
 #prev {
@@ -35,6 +37,7 @@ body {
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
   user-select: none;
+  margin-top: 150px;
 }
 
 #next {
@@ -49,15 +52,12 @@ body {
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
   user-select: none;
+  margin-top: 150px;
 }
 
 #prev:hover,
 #next:hover {
   background-color: rgba(0, 0, 0, 0.506);
-}
-
-.active {
-  background-color: #717171;
 }
 
 .fade {
@@ -78,4 +78,138 @@ body {
   .container {
     width: 100%;
   }
+}
+
+.heading {
+  padding-bottom: 800px;
+  font-size: 40px;
+
+}
+
+
+body {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+header {
+  background-image: url(/images/best-about-us-pages.jpe);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 190px;
+  background-position: center;
+  display: flex;
+  align-items: end;
+  width: 100%;
+}
+
+nav {
+  width: 100%;
+  height: 40px;
+}
+
+nav ul {
+  display: flex;
+  height: 100%;
+  background-color: #d9d9d9;
+  list-style: none;
+  width: 100%;
+}
+
+nav ul li {
+  width: 17%;
+  text-align: center;
+  height: 100%;
+  color: black;
+}
+
+nav a:hover,
+.active {
+  text-transform: uppercase;
+  height: 100%;
+  background-color: beige;
+}
+
+.main-image {
+  margin-top: 30px;
+
+}
+
+.intro-text {
+  font-size: small;
+  margin-left: 8px;
+}
+
+.intro-text ul li {
+  list-style: none;
+
+}
+
+.welcome {
+  font-size: x-small;
+}
+
+.navbar ul li {
+  width: 100%;
+  text-decoration: none;
+  list-style: none;
+  color: black;
+}
+
+.h1 {
+  text-align: center;
+}
+
+.lorem1 {
+  font-size: 20px;
+}
+
+h2 {
+  font-size: 40px;
+  text-align: center;
+
+}
+
+.nabeel-sign {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 43%;
+}
+
+.saniya-sign {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+  width: 43%;
+}
+
+.dad-and-kids {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+  width: 70%;
+  height: 570px;
+}
+
+.pic-2009 {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+  width: 50%;
+  height: 570px;
+}
+
+.social-media ul li {
+  list-style: none;
+  float: left;
+
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
 }
