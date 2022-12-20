@@ -5,7 +5,7 @@ body {
 header {
   background-image: url(/images/best-about-us-pages.jpeg);
   background-repeat: no-repeat;
-  background-size: auto;
+  background-size: cover;
   height: 190px;
   background-position: center;
   display: flex;
@@ -41,12 +41,16 @@ nav a:hover,
 .main-image {
   margin-top: 30px;
 
+
 }
 
 .intro-text {
   font-size: small;
   margin-left: 8px;
+
 }
+
+
 
 .intro-text ul li {
   list-style: none;
@@ -55,6 +59,7 @@ nav a:hover,
 
 .welcome {
   font-size: x-small;
+  float: left;
 }
 
 .navbar ul li {
@@ -69,7 +74,11 @@ nav a:hover,
 }
 
 .lorem1 {
-  font-size: 20px;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 10px;
 }
 
 h2 {
@@ -79,27 +88,27 @@ h2 {
 }
 
 .nabeel-sign {
-  display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 43%;
+  width: 32%;
+  padding-top: 30px;
+
 }
 
 .saniya-sign {
-  display: block;
+
   margin-left: auto;
   margin-right: auto;
-  margin-top: 40px;
-  width: 43%;
+  padding-top: 30px;
+  width: 33%;
+
 }
 
 .dad-and-kids {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 40px;
-  width: 70%;
-  height: 570px;
+  width: 23%;
+  height: 250px;
+  float: left;
+  margin-top: 4px;
 }
 
 .pic-2009 {
