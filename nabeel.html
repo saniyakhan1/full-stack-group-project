@@ -1,63 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
-  <link rel="stylesheet" href="./css/nabeel.css">
-  <link rel="stylesheet" href="/index.html">
-  <link rel="stylesheet" href="/saniya.html">
-
-  <title>Nabeels page</title>
-</head>
-
-
-<body>
-  <header>
-    <nav class="navbar">
-      <ul>
-        <li>
-          <a href="/index.html" title="homepage">Home</a>
-        </li>
-        <li>
-          <a href="nabeel.html" title="Nabeel Khan">Nabeel</a>
-        </li>
-        <li>
-          <a href="saniya.html" title="Saniya Khan">Saniya</a>
-        </li>
-      </ul>
-    </nav>
-  </header>
-  <div>
-    <header class="heading">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+    <link rel="stylesheet" href="./css/nabeel.css" />
+    <link rel="stylesheet" href="/index.html" />
+    <link rel="stylesheet" href="/saniya.html" />
+    <title>Nabeels page</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <ul>
+          <li>
+            <a href="/index.html" title="homepage">Home</a>
+          </li>
+          <li>
+            <a href="nabeel.html" title="Nabeel Khan">Nabeel</a>
+          </li>
+          <li>
+            <a href="saniya.html" title="Saniya Khan">Saniya</a>
+          </li>
+        </ul>
+      </nav>
     </header>
-  </div>
-
-  <div class="container">
-    <div class="image fade">
-      <img src="./images/image1" alt="my image 1" width="100%" height="550px">
+    <div>
+      <header class="heading"></header>
     </div>
-    <div class="image fade">
-      <img src="./images/image2" alt="my image 2" width="100%">
+    <div class="container">
+      <div class="image fade">
+        <img src="./images/image1" alt="my image 1" width="100%" height="550px" />
+      </div>
+      <div class="image fade">
+        <img src="./images/image2" alt="my image 2" width="100%" />
+      </div>
+      <div class="image fade">
+        <img src="./images/image3" alt="my image 3" width="100%" />
+      </div>
+      <div class="image fade">
+        <img src="./images/image4" alt="my image 4" width="100%" height="550px" />
+      </div>
     </div>
-    <div class="image fade">
-      <img src="./images/image3" alt="my image 3" width="100%">
+    <div>
+      <i id="next" onclick="show_image(-1)" class="fa-sharp fa-solid fa-forward"></i>
+      <i id="prev" onclick="show_image(1)" class="fa-sharp fa-solid fa-backward"></i>
     </div>
-    <div class="image fade">
-      <img src="./images/image4" alt="my image 4" width="100%" height="550px">
-    </div>
-  </div>
-  <div>
-    <i id="next" onclick="show_image(-1)" class="fa-sharp fa-solid fa-forward"></i>
-    <i id="prev" onclick="show_image(1)" class="fa-sharp fa-solid fa-backward"></i>
-
-
-  </div>
-  </div>
-  <script src="nabeel.js"></script>
-
-</body>
-
+    <script src="nabeel.js"></script>
+  </body>
 </html>
