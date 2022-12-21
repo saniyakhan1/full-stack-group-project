@@ -9,7 +9,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon server.js",
-    "format": "prettier --write '**/*.{js,ts,json,md,html,ejs}'"
+    "prettier": "prettier --write '**/*.{js,ts,json,md,html,ejs,css}'"
   },
   "repository": {
     "type": "git",
@@ -29,6 +29,7 @@
   },
   "devDependencies": {
     "eslint": "^8.30.0",
+    "nodemon": "^2.0.20",
     "npm": "^9.2.0",
     "prettier": "^2.8.1"
   }

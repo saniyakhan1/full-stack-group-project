@@ -8,7 +8,7 @@ app.set('view engine', 'ejs');
 const port = 4000;
 
 app.get('/saniya', (req, res) => {
-  res.render('saniy');
+  res.render('saniya');
 });
 
 const people = [
@@ -16,7 +16,7 @@ const people = [
   { name: 'Saniya', surname: 'Khan' },
 ];
 
-app.get('/people', (req, res) => {
+app.get('/api/profiles', (req, res) => {
   res.json(people);
 });
 

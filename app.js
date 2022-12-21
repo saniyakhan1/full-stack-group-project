@@ -1,4 +1,4 @@
-fetch('http://localhost:4000/people')
+fetch('/api/profiles')
   .then((res) => {
     return res.json();
   })

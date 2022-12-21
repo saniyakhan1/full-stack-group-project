@@ -8,14 +8,12 @@ nav a:hover {
   background-color: rgba(0, 0, 0, 0.46);
 }
 
-
 body {
   background-image: url(/images/background.webp);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   display: flex;
-
 }
 
 .image {
@@ -76,15 +74,15 @@ body {
 
 @keyframes fade {
   from {
-    opacity: .4;
+    opacity: 0.4;
   }
 
   to {
-    opacity: 1
+    opacity: 1;
   }
 }
 
-@media(max-width:768px) {
+@media (max-width: 768px) {
   .container {
     width: 100%;
   }
@@ -93,9 +91,7 @@ body {
 .heading {
   padding-bottom: 800px;
   font-size: 40px;
-
 }
-
 
 body {
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -139,7 +135,6 @@ nav a:hover {
 
 .main-image {
   margin-top: 30px;
-
 }
 
 .intro-text {
@@ -149,8 +144,6 @@ nav a:hover {
 
 .intro-text ul li {
   list-style: none;
-
-
 }
 
 .welcome {
@@ -175,7 +168,6 @@ nav a:hover {
 h2 {
   font-size: 40px;
   text-align: center;
-
 }
 
 .nabeel-sign {
@@ -214,11 +206,10 @@ h2 {
 .social-media ul li {
   list-style: none;
   float: left;
-
 }
 
 .clearfix::after {
-  content: "";
+  content: '';
   clear: both;
   display: table;
 }
