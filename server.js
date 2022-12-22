@@ -20,9 +20,7 @@ const data = [
 
 app.get('/api/profiles/:name', (req, res) => {
   const found = data.find((element) => element.userName.toLowerCase() == req.params.name.toLowerCase());
-  console.log('FOUND IS', found);
   if (found != undefined) {
-    console.log('in the if');
     return res.send(found);
   }
   return res.sendStatus(404);
