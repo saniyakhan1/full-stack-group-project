@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/css/saniya.css" />
+    <script src="./app.js"></script>
     <title>Saniya's Profile Page</title>
   </head>
   <body>
@@ -26,6 +27,7 @@
       <div class="burger-icon"><i class="fas fa-bars"></i> MENU</div>
     </nav>
     <div class="main-wrapper">
+      <ul class="data"></ul>
       <div class="wrapper">
         <div class="featured">
           <h1>One Of My Favourite Pictures Of me!</h1>
@@ -70,5 +72,8 @@
         </div>
       </div>
     </div>
+    <script>
+      apiClient('saniya');
+    </script>
   </body>
 </html>

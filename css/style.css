@@ -86,7 +86,7 @@ nav a:hover {
   text-align: center;
 }
 
-.lorem1 {
+.main-info p {
   font-size: 24px;
   display: flex;
   align-items: center;
@@ -148,17 +148,6 @@ h4 {
   display: table;
 }
 
-@media screen and (max-width: 820px) {
-  .nabeel-sign {
-    width: 60%;
-  }
-
-  .column {
-    width: 100%;
-    padding-left: 130px;
-  }
-}
-
 @media (max-width: 500px) {
   .dad-and-kids {
     width: 100%;
@@ -167,7 +156,18 @@ h4 {
     padding-right: 50;
   }
 
-  .lorem1 {
+  .main-info p {
     font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 820px) {
+  .nabeel-sign {
+    width: 60%;
+  }
+
+  .column {
+    width: 100%;
+    padding-left: 130px;
   }
 }
