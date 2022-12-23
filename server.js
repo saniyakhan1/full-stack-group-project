@@ -1,29 +1,52 @@
 const express = require('express');
-const cors = require('cors');
 const fs = require('fs');
 const app = express();
-app.use(cors());
 app.use(express.static(__dirname));
 app.set('view engine', 'ejs');
 const port = 4000;
 
-const saniyaData = JSON.parse(fs.readFileSync('./data/saniya.json'));
-
+// Front-End Endpoints
 app.get('/saniya', (req, res) => {
   res.render('saniya');
 });
+app.get('/nabeel', (req, res) => {
+  res.render('nabeel.ejs');
+});
+app.get('/abrar', (req, res) => {
+  res.render('abrar.ejs');
+});
+app.get('/asad', (req, res) => {
+  res.render('asad.ejs');
+});
+app.get('/fozia', (req, res) => {
+  res.render('fozia.ejs');
+});
+app.get('/nimra', (req, res) => {
+  res.render('nimra.ejs');
+});
+app.get('/', (req, res) => {
+  res.render('index.ejs');
+});
 
-const data = [
-  { userName: 'Nabeel', name: 'Nabeel', surname: 'Khan', introText: 'Hi the name is Khan Nabeel Khan.' },
-  saniyaData,
-];
+const retrieveData = () => {
+  const allFiles = fs.readdirSync('./data');
+  return allFiles.map((element) => {
+    return JSON.parse(fs.readFileSync(`./data/${element}`));
+  });
+};
 
+// Backend Endpoints
 app.get('/api/profiles/:name', (req, res) => {
-  const found = data.find((element) => element.userName.toLowerCase() == req.params.name.toLowerCase());
-  if (found != undefined) {
-    return res.send(found);
+  const data = retrieveData();
+  console.log('DATA ISSSSS ', data);
+  const userDataFound = data.find(
+    (element) => element.userName && element.userName.toLowerCase() === req.params.name.toLowerCase()
+  );
+  if (userDataFound != undefined) {
+    return res.send(userDataFound);
+  } else {
+    return res.sendStatus(400);
   }
-  return res.sendStatus(404);
 });
 
 app.listen(port, () => {
