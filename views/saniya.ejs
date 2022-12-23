@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/css/style.css" />
-    <script src="./app.js"></script>
+    <script src="./js/api-client.js"></script>
     <title>Saniya's Profile Page</title>
   </head>
   <body class="saniya">
@@ -13,7 +13,7 @@
       <nav class="navbar">
         <ul>
           <li>
-            <a href="/home" class="active" title="homepage">Home</a>
+            <a href="/" class="active" title="homepage">Home</a>
           </li>
           <li>
             <a href="/nabeel" title="Nabeel Khan">Nabeel</a>
@@ -72,5 +72,14 @@
         </div>
       </div>
     </div>
+    <script>
+      const myData = getData()
+        .then((data) => {
+          console.log('Promise resolved with', data);
+          const markup = `<li>${data.name}</li><li>${data.introText}</li><li>${data.age}</li><li>${data.height}</li><li>${data.weight}</li><li>${data.favouriteColour}</li><li>${data.favouriteCousin}</li>`;
+          document.querySelector('ul.data').insertAdjacentHTML('beforeend', markup);
+        })
+        .catch((error) => console.log(error));
+    </script>
   </body>
 </html>

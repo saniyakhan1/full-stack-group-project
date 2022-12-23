@@ -8,7 +8,7 @@
   "favouriteColour": "pink is my favourite colour!",
   "favouriteCousin": "zoya is my favourite cousin",
   "images": [
-    { "picture-1": { "caption": "my favourite photo", "src": "/images/" }},
-  { "picture-2": { "caption": "my favourite photo", "src": "/images/" }}
-]
+    { "picture-1": { "caption": "my favourite photo", "src": "/images/" } },
+    { "picture-2": { "caption": "my favourite photo", "src": "/images/" } }
+  ]
 }
