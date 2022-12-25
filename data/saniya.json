@@ -1,0 +1,14 @@
+{
+  "name": "Saniya Khan",
+  "userName": "Saniya",
+  "introText": "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the adisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost Pityful a rethoric question rath the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly",
+  "age": "17 Years Old",
+  "height": "4'11",
+  "weight": "40kg",
+  "favouriteColour": "pink is my favourite colour!",
+  "favouriteCousin": "zoya is my favourite cousin",
+  "images": [
+    { "picture-1": { "caption": "my favourite photo", "src": "/images/" } },
+    { "picture-2": { "caption": "my favourite photo", "src": "/images/" } }
+  ]
+}
