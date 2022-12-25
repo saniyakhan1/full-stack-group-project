@@ -1,14 +1,13 @@
-const { response } = require("express");
-const app=require("../server.js");
+const { response } = require('express');
+const app = require('../server.js');
 
-describe("server file", () => {
-  describe("retrieveDataFor function", () => {
-    it("should retrieve data for valid user", () => {
+describe('server file', () => {
+  describe('retrieveDataFor function', () => {
+    it('should retrieve data for valid user', () => {
       expect(response.statusCode).toEqual(200);
-    })
-  })
-})
-
+    });
+  });
+});
 
 // describe("nabeel API",()=>{
 //   it("GET /nabeel --> array nabeel's info",()=>{
@@ -49,7 +48,7 @@ describe("server file", () => {
 //       )
 //     })
 //   })
-  
+
 //   it("POST /nabeel/id --> validates request body",()=>{
 //     return request(app).post("/nabeel").send({name:123}).expect(422)
 //   })

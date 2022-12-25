@@ -34,9 +34,9 @@ app.listen(port, () => {
 
 const retrieveDataFor = (name) => {
   const allFiles = fs.readdirSync('./data');
-  const dataFound = allFiles.find(element => element.includes(name));
+  const dataFound = allFiles.find((element) => element.includes(name));
 
-  if(dataFound){
+  if (dataFound) {
     return JSON.parse(fs.readFileSync(`./data/${dataFound}`));
   } else return undefined;
 };
