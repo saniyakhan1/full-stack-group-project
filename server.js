@@ -6,22 +6,21 @@ app.set('view engine', 'ejs');
 const port = 4000;
 
 // Frontend Endpoints
+app.get('/', (req, res) => {
+  res.render('index');
+});
 app.get('/saniya', (req, res) => {
   res.render('saniya');
 });
 app.get('/nabeel', (req, res) => {
   res.render('nabeel');
 });
-app.get('/', (req, res) => {
-  res.render('index');
-});
 
 // Backend Endpoints
 app.get('/api/profiles/:name', (req, res) => {
-  const data = retrieveData();
-  const userDataFound = data.find(
-    (element) => element.userName && element.userName.toLowerCase() === req.params.name.toLowerCase()
-  );
+  const userName = req.params.name.toLowerCase();
+  const userDataFound = retrieveDataFor(userName);
+
   if (userDataFound != undefined) {
     res.send(userDataFound);
   } else {
@@ -33,41 +32,18 @@ app.listen(port, () => {
   console.log(`listening on port ${port}`);
 });
 
-const retrieveData = () => {
+const retrieveDataFor = (name) => {
+  const allFiles = fs.readdirSync('./data');
+  const dataFound = allFiles.find(element => element.includes(name));
+
+  if(dataFound){
+    return JSON.parse(fs.readFileSync(`./data/${dataFound}`));
+  } else return undefined;
+};
+
+const retrieveAllData = () => {
   const allFiles = fs.readdirSync('./data');
   return allFiles.map((element) => {
     return JSON.parse(fs.readFileSync(`./data/${element}`));
   });
 };
-
-// // Backend Endpoints
-// app.get('/api/profiles/:name', (req, res) => {
-//   const userName = req.params.name.toLowerCase();
-//   const userDataFound = retrieveDataFor(userName);
-
-//   if (userDataFound != undefined) {
-//     res.send(userDataFound);
-//   } else {
-//     res.sendStatus(400);
-//   }
-// });
-
-// app.listen(port, () => {
-//   console.log(`listening on port ${port}`);
-// });
-
-// const retrieveDataFor = (name) => {
-//   const allFiles = fs.readdirSync('./data');
-//   const dataFound = allFiles.find(element => element.includes(name));
-
-//   if(dataFound){
-//     return JSON.parse(fs.readFileSync(`./data/${dataFound}`));
-//   } else return undefined;
-// };
-
-// const retrieveAllData = () => {
-//   const allFiles = fs.readdirSync('./data');
-//   return allFiles.map((element) => {
-//     return JSON.parse(fs.readFileSync(`./data/${element}`));
-//   });
-// };
