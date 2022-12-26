@@ -40,3 +40,20 @@ describe('/api/profiles/{invalid} endpoint', () => {
     return request(app).get('/api/profiles/invalid').expect(400);
   });
 });
+
+describe('/api/homepage endpoint', () => {
+  it('should return a 200 response', () => {
+    return request(app).get('/api/homepage').expect(200);
+  });
+
+  it('should return a JSON response', () => {
+    const expectedResponse = {
+      introText: expect.any(String),
+    };
+    return request(app)
+    .get('/api/homepage')
+    .then((response) => {
+      expect(response.body).toEqual(expect.objectContaining(expectedResponse));
+    });
+  });
+});
