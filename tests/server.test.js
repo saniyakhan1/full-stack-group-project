@@ -1,55 +1,42 @@
-const { response } = require('express');
-const app = require('../server.js');
+const request = require('supertest');
+const app = require('../server');
 
-describe('server file', () => {
-  describe('retrieveDataFor function', () => {
-    it('should retrieve data for valid user', () => {
-      expect(response.statusCode).toEqual(200);
-    });
+describe('/api/profiles/{nabeel} endpoint', () => {
+  it('should return a JSON response', () => {
+    return request(app).get('/api/profiles/nabeel').expect(200).expect('Content-Type', /json/);
   });
 });
 
-// describe("nabeel API",()=>{
-//   it("GET /nabeel --> array nabeel's info",()=>{
-//     return request(app).get("/nabeel").expect("Content-Type", /json/).expect(200).then(response=>{
-//       expect(response.body).toEqual(expect.arrayContaining([
-//         expect.objectContaining({
-//           id:expect.any(Number),
-//           name:expect.any(String),
-//           completed: expect.any(Boolean)
-//         })
-//       ]))
-//     })
-//   })
+it('should return an object containing {nabeel} as the username', () => {
+  return request(app)
+    .get('/api/profiles/nabeel')
+    .then((response) => {
+      expect(response.body).toEqual(
+        expect.objectContaining({
+          userName: 'Nabeel',
+        })
+      );
+    });
+});
 
-//   it("GET /nabeel/id --> specific nabeel by ID",()=>{return request(app).get("/nabeel").expect("content-Type", /json/).expect(200).then(response=>{
-//     expect(response.body).toEqual(expect.arrayContaining([
-//       expect.objectContaining({
-//         id:expect.any(Number),
-//         name:expect.any(String),
-//         completed: expect.any(Boolean)
-//       })
-//     ]))
-//   })
-// })
+it("should return an object containing nabeel's data", () => {
+  const expectedResponse = {
+    introText: expect.any(String),
+    age: expect.any(String),
+    height: expect.any(String),
+    weight: expect.any(String),
+    favouriteColour: expect.any(String),
+    favouriteCousin: expect.any(String),
+  };
+  return request(app)
+    .get('/api/profiles/nabeel')
+    .then((response) => {
+      expect(response.body).toEqual(expect.objectContaining(expectedResponse));
+    });
+});
 
-//   it("GET /nabeel/id --> return 404 if not found",()=>{
-//     return request(app).get("/nabeel/999999").expect(404)
-//   })
-
-//   it("POST /nabeel/id --> created nabeel",()=>{
-//     return request(app).post("/nabeel").send({
-//       name:"nabeel khan"
-//     }).expect("content-Type",/json/).expect(201).then(response=>{
-//       expect(response.body).toEqual(expect.objectContaining({
-//         name: "nabeel khan",
-//         completed: false
-//         })
-//       )
-//     })
-//   })
-
-//   it("POST /nabeel/id --> validates request body",()=>{
-//     return request(app).post("/nabeel").send({name:123}).expect(422)
-//   })
-// })
+describe('/api/profiles/{invalid} endpoint', () => {
+  it('should return a 400 response', () => {
+    return request(app).get('/api/profiles/invalid').expect(400);
+  });
+});

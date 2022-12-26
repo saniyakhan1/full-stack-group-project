@@ -47,3 +47,5 @@ const retrieveAllData = () => {
     return JSON.parse(fs.readFileSync(`./data/${element}`));
   });
 };
+
+module.exports = app;
