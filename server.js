@@ -18,7 +18,7 @@ app.get('/nabeel', (req, res) => {
 
 // Backend Endpoints
 app.get('/api/homepage', (req, res) => {
-  res.send({"introText":"some intro text"});
+  res.send({ introText: 'some intro text' });
 });
 
 app.get('/api/profiles/:name', (req, res) => {

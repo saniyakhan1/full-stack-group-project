@@ -51,9 +51,9 @@ describe('/api/homepage endpoint', () => {
       introText: expect.any(String),
     };
     return request(app)
-    .get('/api/homepage')
-    .then((response) => {
-      expect(response.body).toEqual(expect.objectContaining(expectedResponse));
-    });
+      .get('/api/homepage')
+      .then((response) => {
+        expect(response.body).toEqual(expect.objectContaining(expectedResponse));
+      });
   });
 });
